@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片翻面效果</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <div class="button-container">
+        <button id="startGame">開始遊戲</button>
+        <label for="gridSize">卡片排列方式：</label>
+        <select id="gridSize">
+            <option value="2">2x2</option>
+            <option value="4" selected>4x4</option>
+            <option value="6">6x6</option>
+        </select>
+    </div>
+    <div class="theme-selection">
+        <label>
+            <input type="radio" name="theme" value="fruit" checked> 水果主題
+            <input type="radio" name="theme" value="pirate"> 海盜主題
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="checkbox" id="hideMatched"> 隱藏已配對卡片
+        </label>
+    </div>
+    <div id="countdown" style="font-size: 24px; margin-bottom: 20px;"></div>
+    <div class="card-container" id="cardContainer"></div>
+    <audio id="winSound" src="sounds/220184_4100837-lq.mp3"></audio>
+    <audio id="loseSound" src="sounds/220174_4100837-lq.mp3"></audio>
+    <audio id="flopSound" src="sounds/536788_1415754-lq.mp3"></audio>
+    <audio id="endSound" src="sounds/607207_7724198-lq.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
